@@ -1,0 +1,202 @@
+.navbarsection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+    background-image: url(../img/banner1.jpg);
+
+    header {
+        padding: 15px;
+        width: 100%;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            .navlink {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                gap: 10px;
+                border-top: 1px solid $white-color;
+                border-bottom: 1px solid $white-color;
+
+                li {
+                    padding: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a {
+                        font-size: 16px;
+                        color: $white-color;
+                    }
+                }
+
+                li:hover {
+                    background-color: $red-color;
+                }
+            }
+
+            
+        }
+    }
+
+    .list-menu {
+        display: none;
+    }
+
+    .main-title {
+
+        width: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: moses;
+        color: $white-color;
+        text-align: center;
+
+        h1 {
+            font-size: 60px;
+            width: 530px;
+
+            span {
+                color: #b12a3b;
+            }
+        }
+        .links-btn {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            font-family: moses-one;
+
+            a {
+                background-color: $white-color;
+                padding: 10px 15px;
+                border-radius: 25px;
+                color: $black-color;
+                font-size: 15px;
+
+            }
+
+            .btn2 {
+                background-color: $red-color;
+                color: $white-color;
+            }
+        }
+    }
+
+    .path {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-position: center;
+        background-repeat: repeat-x;
+        background-image: url(../img/bottom_decoration_img.png);
+
+    }
+}
+
+// header media sm end md
+@media (min-width:320px) and (max-width:768px) {
+   
+    .navm {
+        display: block;
+        z-index: 100;
+        position: relative;
+       
+    }
+
+    .navm .links {
+        z-index: 100;
+        position: relative;
+        right: 30%;
+        bottom: -50%;
+        transform: translate(-10%, -10%);
+    }
+
+    .navm .links:hover .icontd span:nth-child(2) {
+        width: 100%;
+    }
+
+    .navm .links .icontd {
+        width: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .navm .links .icontd span {
+        background-color: white;
+        margin-bottom: 5px;
+        height: 2px;
+    }
+
+    .navm .links .icontd span:first-child {
+        width: 100%;
+    }
+
+    .navm .links .icontd span:nth-child(2) {
+        width: 60%;
+        transition: 0.3s;
+    }
+
+    .navm .links .icontd span:last-child {
+        width: 100%;
+    }
+
+    .navm .links ul {
+        background-color: #053263e8;
+        position: absolute;
+        z-index: 2;
+        min-width: 10px;
+        height: auto;
+        top: calc(100% + 19px);
+        right: 2px;
+        display: none;
+    }
+
+    .navm .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #ddd transparent;
+        position: absolute;
+        right: 2px;
+        top: -20px;
+    }
+
+    .navm .links:hover ul {
+        display: block;
+    }
+
+    .navm .links ul li a {
+        display: block;
+        font-size: 12px;
+        color: white;
+        padding: 15px;
+        padding-inline: 40px;
+        transition: 0.5s;
+    }
+
+    .navm .links ul li a:hover {
+        padding-bottom: 20px;
+        color: rgb(72, 70, 70);
+        font-size: 14px;
+    }
+
+    .navm .links ul li:not(:last-child) a {
+        border-bottom: 1px solid #ddd;
+    }
+}

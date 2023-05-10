@@ -1,0 +1,79 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  height: 400px;
+  background-image: url(../img/footer_background.jpg);
+  background-position: center;
+  background-size: cover;
+  .path-footer {
+    position: absolute;
+    top: -6px;
+    width: 100%;
+    height: 20px;
+    background-image: url(../img/footer_bottom_decoration_img.png);
+    background-position: center;
+    background-repeat: repeat-x;
+  }
+  .container {
+    padding-bottom: 80px;
+    height: 100%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    .about {
+      height: 100%;
+      color: $white-color;
+      .icons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        font-size: 35px;
+      }
+    }
+    .images {
+      color: $white-color;
+      .imgig {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    .tags {
+        height: 100%;
+      color: $white-color;
+      .tagnames {
+        height: 100%;
+        .tag {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+            height: 60px;
+          span {
+            color: $white-color;
+            background-color: $red-color;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid $white-color;
+          }
+        }
+      }
+    }
+  }
+  .btm-footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: $red-color;
+  }
+}
